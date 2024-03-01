@@ -3,7 +3,8 @@ import React, { useState } from "react";
 export default function MvMouse() {
   const [XY, setXY] = useState({ x: 0, y: 0 });
   const handlemouse = (e) => {
-    setXY({ x: e.clientX, y: e.clientY });
+    // setXY({ x: e.clientX, y: e.clientY });
+    setXY((prev) => ({ ...prev, x: e.clientX }));
     console.log(XY);
   };
   return (
